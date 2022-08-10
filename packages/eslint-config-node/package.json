@@ -1,0 +1,37 @@
+{
+	"name": "@stimulcross/eslint-config-node",
+	"publishConfig": {
+		"access": "public"
+	},
+	"version": "1.0.0",
+	"description": "Personal ESLint configuration for Node environment.",
+	"author": "StimulCross <stimulcross@gmail.com>",
+	"homepage": "https://github.com/StimulCross/configs#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StimulCross/configs.git",
+		"directory": "packages/eslint-config-node"
+	},
+	"license": "BSD-3-Clause",
+	"contributors": [
+		"Pavel Prichodko <prichodko.p@gmail.com>",
+		"Robert Rossmann <rr.rossmann@me.com>",
+		"Danny Kijkov <daniel.kijkov@strv.com>"
+	],
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"optional.js",
+		"style.js",
+		"v10.js",
+		"v12.js",
+		"v14.js",
+		"v16.js",
+		"README.md",
+		"LICENSE"
+	],
+	"dependencies": {
+		"@stimulcross/eslint-config-base": "^1.0.0",
+		"eslint-plugin-node": "^11.1.0"
+	}
+}

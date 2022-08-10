@@ -1,0 +1,22 @@
+{
+	"name": "@stimulcross/prettier-config",
+	"publishConfig": {
+		"access": "public"
+	},
+	"version": "1.0.0",
+	"description": "Personal configuration for Prettier.",
+	"author": "StimulCross <stimulcross@gmail.com>",
+	"homepage": "https://github.com/StimulCross/configs#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StimulCross/configs.git",
+		"directory": "packages/prettier-config"
+	},
+	"license": "MIT",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"README.md",
+		"LICENSE"
+	]
+}

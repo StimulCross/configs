@@ -1,0 +1,35 @@
+{
+	"name": "@stimulcross/eslint-config-typescript",
+	"publishConfig": {
+		"access": "public"
+	},
+	"version": "1.0.0",
+	"description": "Personal ESLint configuration for TypeScript.",
+	"author": "StimulCross <stimulcross@gmail.com>",
+	"homepage": "https://github.com/StimulCross/configs#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StimulCross/configs.git",
+		"directory": "packages/eslint-config-typescript"
+	},
+	"license": "BSD-3-Clause",
+	"contributors": [
+		"Pavel Prichodko <prichodko.p@gmail.com>",
+		"Robert Rossmann <rr.rossmann@me.com>",
+		"Danny Kijkov <daniel.kijkov@strv.com>"
+	],
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"optional.js",
+		"style.js",
+		"README.md",
+		"LICENSE"
+	],
+	"dependencies": {
+		"@stimulcross/eslint-config-base": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.33.0",
+		"@typescript-eslint/parser": "^5.33.0",
+		"eslint-import-resolver-typescript": "^3.4.0"
+	}
+}

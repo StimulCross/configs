@@ -1,0 +1,34 @@
+{
+	"name": "@stimulcross/eslint-config-base",
+	"publishConfig": {
+		"access": "public"
+	},
+	"version": "1.0.0",
+	"description": "Personal base ESLint configuration.",
+	"author": "StimulCross <stimulcross@gmail.com>",
+	"homepage": "https://github.com/StimulCross/configs#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StimulCross/configs.git",
+		"directory": "packages/eslint-config-base"
+	},
+	"license": "BSD-3-Clause",
+	"contributors": [
+		"Pavel Prichodko <prichodko.p@gmail.com>",
+		"Robert Rossmann <rr.rossmann@me.com>",
+		"Danny Kijkov <daniel.kijkov@strv.com>"
+	],
+	"main": "index.js",
+	"files": [
+		"globs.js",
+		"optional.js",
+		"style.js",
+		"index.js",
+		"README.md",
+		"LICENSE"
+	],
+	"dependencies": {
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsdoc": "^39.3.6"
+	}
+}
