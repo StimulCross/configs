@@ -1,1 +1,1 @@
-Set of various configs.
+Set of various configs for personal use.
