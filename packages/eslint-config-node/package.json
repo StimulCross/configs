@@ -5,7 +5,7 @@
 	},
 	"version": "1.0.0",
 	"description": "Personal ESLint configuration for Node environment.",
-	"author": "StimulCross <stimulcross@gmail.com>",
+	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"homepage": "https://github.com/StimulCross/configs#readme",
 	"repository": {
 		"type": "git",

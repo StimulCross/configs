@@ -8,7 +8,7 @@
 	"description": "Set of various configs.",
 	"main": "index.js",
 	"repository": "git@github.com:StimulCross/configs.git",
-	"author": "StimulCross <stimulcross@gmail.com>",
+	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "See LICENSE file in each package",
 	"devDependencies": {
 		"eslint": "^8.21.0",
@@ -20,7 +20,8 @@
 	"scripts": {
 		"lint": "eslint --ext js,ts packages",
 		"prettier:check": "prettier --check \"packages/**\"",
-		"prettier:fix": "prettier --write \"packages/**\""
+		"prettier:fix": "prettier --write \"packages/**\"",
+		"prepare": "husky install"
 	},
 	"husky": {
 		"hooks": {
