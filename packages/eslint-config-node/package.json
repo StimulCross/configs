@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Personal ESLint configuration for Node environment.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"homepage": "https://github.com/StimulCross/configs#readme",
@@ -31,7 +31,7 @@
 		"LICENSE"
 	],
 	"dependencies": {
-		"@stimulcross/eslint-config-base": "^1.0.1",
+		"@stimulcross/eslint-config-base": "^1.0.2",
 		"eslint-plugin-node": "^11.1.0"
 	}
 }
