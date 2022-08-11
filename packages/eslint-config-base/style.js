@@ -30,17 +30,17 @@ module.exports = {
 
 		// Require braces in arrow function body
 		// This rule can enforce the use of braces around arrow function body.
-		'arrow-body-style': ['warn', 'as-needed'],
+		'arrow-body-style': ['error', 'as-needed', { requireReturnForObjectLiteral: true }],
 
 		// Require parens in arrow function arguments
 		// Arrow functions can omit parentheses when they have exactly one parameter. Since their main
 		// strength lies in being short and concise, parens around arguments should be omitted when they
 		// are not needed.
-		'arrow-parens': ['warn', 'as-needed'],
+		'arrow-parens': ['error', 'as-needed'],
 
 		// Require space before/after arrow function's arrow
 		'arrow-spacing': [
-			'warn',
+			'error',
 			{
 				before: true,
 				after: true
@@ -131,7 +131,7 @@ module.exports = {
 		// Enforce consistent line breaks inside function parentheses
 		// Requires linebreaks inside function parentheses if any of the parameters/arguments have a
 		// line break between them. Otherwise, it disallows linebreaks.
-		'function-paren-newline': ['warn', 'multiline'],
+		'function-paren-newline': ['off', 'multiline'],
 
 		// Require or disallow spacing between function identifiers and their invocations
 		// This rule disallows spaces between the function name and the opening parenthesis that calls
@@ -145,7 +145,7 @@ module.exports = {
 		// in stack traces which help during debugging.
 		// Allow arrow functions to be saved into variables
 		'func-style': [
-			'warn',
+			'off',
 			'declaration',
 			{
 				allowArrowFunctions: true
@@ -199,7 +199,7 @@ module.exports = {
 		// Validate Indentation
 		// This rule is aimed to enforce consistent indentation style.
 		indent: [
-			'error',
+			'off',
 			'tab',
 			{
 				SwitchCase: 1
@@ -248,15 +248,21 @@ module.exports = {
 		// readability and maintainability many coders have developed a convention to limit lines of
 		// code to a certain number of characters.
 		'max-len': [
-			'error',
-			{ code: 120, ignoreTrailingComments: true, ignoreUrls: true, ignorePattern: '^import\\W.*' }
+			'off',
+			{
+				code: 120,
+				ignoreTrailingComments: true,
+				ignoreUrls: true,
+				ignoreStrings: true,
+				ignorePattern: '^import\\W.*'
+			}
 		],
 
 		// Limit Maximum Number of Parameters
 		// Functions that take numerous parameters can be difficult to read and write because it
 		// requires the memorization of what each parameter is, its type, and the order they should
 		// appear in.
-		'max-params': ['warn', 4],
+		'max-params': 'off',
 
 		// Set Maximum Depth of Nested Callbacks
 		// This rule is aimed at increasing code clarity by discouraging deeply nesting callbacks.
@@ -292,10 +298,10 @@ module.exports = {
 		// such, it warns whenever it sees new followed by an identifier that isn't capitalized or
 		// whenever it sees capitalized function called directly without new operator.
 		'new-cap': [
-			'warn',
+			'off',
 			{
-				newIsCap: true,
-				capIsNew: true
+				newIsCap: false,
+				capIsNew: false
 			}
 		],
 
@@ -333,7 +339,7 @@ module.exports = {
 		// This rule restricts the use of parentheses to only where they are necessary.
 		// developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 		'no-extra-parens': [
-			'warn',
+			'error',
 			'all',
 			{
 				nestedBinaryExpressions: false,
@@ -356,7 +362,7 @@ module.exports = {
 
 		// Disallows comments after code
 		// This rule will disallow comments on the same line as code.
-		'no-inline-comments': 'warn',
+		'no-inline-comments': 'off',
 
 		// Disallow if as the Only Statement in an else Block
 		// This rule warns when an if statement's else block contains only another if statement.
@@ -366,12 +372,12 @@ module.exports = {
 		// Enclosing complex expressions by parentheses clarifies the developer’s intention, which makes
 		// the code more readable. This rule warns when different operators are used consecutively
 		// without parentheses in an expression.
-		'no-mixed-operators': 'warn',
+		'no-mixed-operators': 'off',
 
 		// Disallow mixed spaces and tabs for indentation
 		// The no-mixed-spaces-and-tabs rule is aimed at flagging any lines of code that are indented
 		// with a mixture of tabs and spaces.
-		'no-mixed-spaces-and-tabs': 'warn',
+		'no-mixed-spaces-and-tabs': 'off',
 
 		// Disallow Use of Chained Assignment Expressions
 		// This rule disallows using multiple assignments within a single statement.
@@ -413,7 +419,7 @@ module.exports = {
 		'no-trailing-spaces': 'warn',
 
 		// Disallow Dangling Underscores in Identifiers
-		'no-underscore-dangle': 'warn',
+		'no-underscore-dangle': 'off',
 
 		// Disallow conditional expressions that can be expressed with simpler constructs
 		// Use || instead of ternary in default assignments
@@ -500,7 +506,7 @@ module.exports = {
 		// When a statement is too long to fit on a single line, line breaks are generally inserted next
 		// to the operators separating expressions. This rule is aimed at enforcing a particular
 		// operator line break style.
-		'operator-linebreak': ['warn', 'before'],
+		'operator-linebreak': ['off', 'after'],
 
 		// Enforce padding within blocks
 		// This rule enforces consistent padding within blocks.
@@ -509,14 +515,7 @@ module.exports = {
 		// Require or disallow padding lines between statements
 		// This rule requires or disallows blank lines between the given 2 kinds of statements. Properly
 		// blank lines help developers to understand the code.
-		'padding-line-between-statements': [
-			'warn',
-			{ blankLine: 'always', next: '*', prev: ['cjs-import', 'directive'] },
-			{ blankLine: 'always', prev: '*', next: ['cjs-export', 'class', 'export', 'function'] },
-			{ blankLine: 'never', prev: 'directive', next: 'directive' },
-			{ blankLine: 'never', prev: 'cjs-import', next: 'cjs-import' },
-			{ blankLine: 'never', prev: 'export', next: 'export' }
-		],
+		'padding-line-between-statements': ['error', { blankLine: 'always', prev: '*', next: ['class', 'function'] }],
 
 		// Suggest using arrow functions as callbacks
 		// This rule is aimed to flag usage of function expressions in an argument list.
@@ -604,7 +603,7 @@ module.exports = {
 		'space-before-function-paren': [
 			'error',
 			{
-				anonymous: 'never',
+				anonymous: 'always',
 				named: 'never',
 				asyncArrow: 'always'
 			}
@@ -679,7 +678,7 @@ module.exports = {
 		// An export declaration or module.exports assignment can appear anywhere in the code. By
 		// requiring a single export declaration all your exports will remain at one place, making it
 		// easier to see what exports a module provides.
-		'import/group-exports': 'warn',
+		'import/group-exports': 'off',
 
 		// Ensure that there are no useless path segments in import statement path
 		'import/no-useless-path-segments': [

@@ -59,7 +59,14 @@ module.exports = {
 		'func-call-spacing': 'off',
 
 		// Enforce consistent indentation
-		'@typescript-eslint/indent': style.rules.indent,
+
+		'@typescript-eslint/indent': [
+			'off',
+			'tab',
+			{
+				ignoredNodes: ['TSTypeParameterInstantiation']
+			}
+		],
 		indent: 'off',
 
 		// This rule will enforce consistency of spacing around keywords and keyword-like tokens
@@ -198,7 +205,7 @@ module.exports = {
 		// with a specific string.
 		'@typescript-eslint/prefer-string-starts-ends-with': 'error',
 
-		'@typescript-eslint/prefer-ts-expect-error': 'error',
+		'@typescript-eslint/prefer-ts-expect-error': 'off',
 
 		// Enforce the consistent use of either backticks, double, or single quotes
 		// This rule extends the base eslint/quotes rule. It supports all options and features of the

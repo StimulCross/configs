@@ -69,7 +69,7 @@ module.exports = {
 		// When invoking a callback function which uses the Node.js error-first callback pattern, all of
 		// your errors should either use the Error class or a subclass of it. It is also acceptable to
 		// use undefined or null if there is no error.
-		'node/no-callback-literal': ['error'],
+		'node/no-callback-literal': 'off',
 
 		// Disallow assignment to exports object
 		// This rule is aimed at disallowing `exports = {}`.

@@ -164,7 +164,7 @@ module.exports = {
 
 		// Require or disallow initialization in variable declarations.
 		'init-declarations': 'off',
-		'@typescript-eslint/init-declarations': ['error'],
+		'@typescript-eslint/init-declarations': ['off'],
 
 		// Require a consistent member declaration order
 		// A consistent ordering of fields, methods and constructors can make interfaces, type literals,
@@ -179,9 +179,9 @@ module.exports = {
 					'public-static-method',
 					'constructor',
 					'public-get',
+					'method',
 					'protected-get',
 					'private-get',
-					'method',
 					'protected-method',
 					'private-method'
 				]
@@ -215,7 +215,8 @@ module.exports = {
 		'no-dupe-class-members': 'off',
 
 		// Disallow empty functions.
-		'@typescript-eslint/no-empty-function': 'error',
+		'@typescript-eslint/no-empty-function': ['error', { allow: ['constructors'] }],
+		'no-empty-function': 'off',
 
 		// Disallow the declaration of empty interfaces
 		// An empty interface is equivalent to its supertype. If the interface does not implement a
@@ -420,7 +421,7 @@ module.exports = {
 			{
 				path: 'never',
 				types: 'never',
-				lib: 'never'
+				lib: 'always'
 			}
 		],
 

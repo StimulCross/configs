@@ -55,7 +55,7 @@ module.exports = {
 		// Performing an operation on each element of an iterable is a common task. However, performing
 		// an await as part of each operation is an indication that the program is not taking full
 		// advantage of the parallelization benefits of async/await.
-		'no-await-in-loop': 'warn',
+		'no-await-in-loop': 'off',
 
 		// Disallow lexical declarations in case/default clauses
 		// This rule disallows lexical declarations (let, const, function and class) in case/default
@@ -123,7 +123,7 @@ module.exports = {
 		// Disallow empty functions
 		// This rule is aimed at eliminating empty functions. A function will not be considered a
 		// problem if it contains a comment.
-		'no-empty-function': 'error',
+		'no-empty-function': ['error', { allow: ['constructors'] }],
 
 		// Disallow eval()
 		// This rule is aimed at preventing potentially dangerous, unnecessary, and slow code by
