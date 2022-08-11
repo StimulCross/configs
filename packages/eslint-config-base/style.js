@@ -229,7 +229,7 @@ module.exports = {
 
 		// Disallow mixing CRLF and LF linebreaks
 		// This rule aims to ensure having consistent line endings independent of operating system.
-		'linebreak-style': ['error', 'unix'],
+		'linebreak-style': ['off'],
 
 		// Require an empty line between class members
 		// This rule improves readability by enforcing lines between class members. It will not check
