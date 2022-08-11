@@ -328,25 +328,17 @@ module.exports = {
 		// Disallow return in else
 		// If an if block contains a return statement, the else block becomes unnecessary. Its contents
 		// can be placed outside of the block.
-		'no-else-return': 'warn',
+		'no-else-return': 'error',
 
 		// Disallow Extra Boolean Casts
 		// In contexts such as an if statement's test where the result of the expression will already be
 		// coerced to a Boolean, casting to a Boolean via double negation (!!) is unnecessary.
-		'no-extra-boolean-cast': 'warn',
+		'no-extra-boolean-cast': 'error',
 
 		// Disallow unnecessary parentheses
 		// This rule restricts the use of parentheses to only where they are necessary.
 		// developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-		'no-extra-parens': [
-			'error',
-			'all',
-			{
-				nestedBinaryExpressions: false,
-				returnAssign: false,
-				ignoreJSX: 'multi-line'
-			}
-		],
+		'no-extra-parens': 'off',
 
 		// Disallow Floating Decimals
 		// Float values in JavaScript contain a decimal point, and there is no requirement that the
