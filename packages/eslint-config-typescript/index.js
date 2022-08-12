@@ -343,7 +343,7 @@ module.exports = {
 		// Some types can override some other types ("constituents") in a union or intersection and/or be overridden by
 		// some other types. TypeScript's set theory of types includes cases where a constituent type might be useless
 		// in the parent union or intersection.
-		'@typescript-eslint/no-redundant-type-constituents': 'warn',
+		'@typescript-eslint/no-redundant-type-constituents': 'off',
 
 		// Disallows invocation of require()
 		// Prefer the newer ES6-style imports over require().
@@ -523,7 +523,7 @@ module.exports = {
 		],
 
 		// Enforce template literal expressions to be of string type
-		'@typescript-eslint/restrict-template-expressions': 'error',
+		'@typescript-eslint/restrict-template-expressions': 'off',
 
 		// Require returning awaited values in specific contexts
 		// Returning an awaited promise can make sense for better stack trace information as well as for
