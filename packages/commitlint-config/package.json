@@ -1,0 +1,29 @@
+{
+	"name": "@stimulcross/commitlint-config",
+	"version": "1.1.0",
+	"description": "Personal configuration for commitlint.",
+	"author": "Stimul Cross <stimulcross@gmail.com>",
+	"homepage": "https://github.com/StimulCross/configs#readme",
+	"license": "BSD-3-Clause",
+	"contributors": [
+		"Pavel Prichodko <prichodko.p@gmail.com>",
+		"Robert Rossmann <rr.rossmann@me.com>",
+		"Danny Kijkov <daniel.kijkov@strv.com>"
+	],
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"lerna.js",
+		"LICENSE",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StimulCross/configs.git",
+		"directory": "packages/eslint-config-base"
+	},
+	"dependencies": {
+		"@commitlint/config-conventional": "^17.0.3",
+		"@commitlint/config-lerna-scopes": "^17.0.2"
+	}
+}

@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.0.4",
+	"version": "1.1.0",
 	"description": "Personal ESLint configuration for TypeScript.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"homepage": "https://github.com/StimulCross/configs#readme",
