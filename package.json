@@ -4,13 +4,14 @@
 	"workspaces": [
 		"packages/*"
 	],
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Set of various configs.",
 	"main": "index.js",
 	"repository": "git@github.com:StimulCross/configs.git",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "See LICENSE file in each package",
 	"devDependencies": {
+		"@commitlint/cli": "^17.0.3",
 		"eslint": "^8.21.0",
 		"husky": "^8.0.1",
 		"lerna": "^5.4.0",
@@ -25,7 +26,8 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged"
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g"
 		}
 	},
 	"lint-staged": {

@@ -1,17 +1,12 @@
 {
-	"name": "@stimulcross/eslint-config-node",
+	"name": "@stimulcross/commitlint-config",
 	"publishConfig": {
 		"access": "public"
 	},
 	"version": "1.1.0",
-	"description": "Personal ESLint configuration for Node environment.",
+	"description": "Personal configuration for commitlint.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"homepage": "https://github.com/StimulCross/configs#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/StimulCross/configs.git",
-		"directory": "packages/eslint-config-node"
-	},
 	"license": "BSD-3-Clause",
 	"contributors": [
 		"Pavel Prichodko <prichodko.p@gmail.com>",
@@ -21,18 +16,18 @@
 	"main": "index.js",
 	"files": [
 		"index.js",
-		"optional.js",
-		"style.js",
-		"v10.js",
-		"v12.js",
-		"v14.js",
-		"v16.js",
-		"README.md",
-		"LICENSE"
+		"lerna.js",
+		"LICENSE",
+		"README.md"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StimulCross/configs.git",
+		"directory": "packages/eslint-config-base"
+	},
 	"dependencies": {
-		"@stimulcross/eslint-config-base": "^1.0.3",
-		"eslint-plugin-node": "^11.1.0"
+		"@commitlint/config-conventional": "^17.0.3",
+		"@commitlint/config-lerna-scopes": "^17.0.2"
 	},
 	"gitHead": "c9ed777af74e817c5b57cae9986deefcd9a2315b"
 }
