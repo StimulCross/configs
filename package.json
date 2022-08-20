@@ -20,13 +20,13 @@
 	},
 	"scripts": {
 		"lint": "eslint --ext js,ts packages",
-		"prettier:check": "prettier --check \"packages/**\"",
-		"prettier:fix": "prettier --write \"packages/**\"",
+		"prettier:check": "prettier --check .",
+		"prettier:fix": "prettier --write .",
 		"prepare": "husky install"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged",
+			"pre-commit": "lint-staged --allow-empty",
 			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g"
 		}
 	},
