@@ -28,6 +28,5 @@
 	"dependencies": {
 		"@commitlint/config-conventional": "^17.0.3",
 		"@commitlint/config-lerna-scopes": "^17.0.2"
-	},
-	"gitHead": "c9ed777af74e817c5b57cae9986deefcd9a2315b"
+	}
 }
