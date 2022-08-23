@@ -94,7 +94,7 @@ module.exports = {
 		],
 
 		// Enforce using a particular method signature syntax
-		'@typescript-eslint/method-signature-style': ['error', 'property'],
+		'@typescript-eslint/method-signature-style': 'off',
 
 		// Enforces naming conventions for everything across a codebase
 		'@typescript-eslint/naming-convention': [
