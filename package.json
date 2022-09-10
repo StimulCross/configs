@@ -12,7 +12,7 @@
 	"license": "See LICENSE file in each package",
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
-		"eslint": "^8.21.0",
+		"eslint": "8.20",
 		"husky": "^8.0.1",
 		"lerna": "^5.4.0",
 		"lint-staged": "^13.0.3",
