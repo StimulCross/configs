@@ -245,7 +245,7 @@ module.exports = {
 		// Disallow useless backreferences in regular expressions
 		'no-useless-backreference': 'warn',
 
-		'no-negated-condition': 'error',
+		'no-negated-condition': 'off',
 
 		// Disallow new For Side Effects
 		// This rule is aimed at maintaining consistency and convention by disallowing constructor calls
@@ -607,7 +607,7 @@ module.exports = {
 		// The u flag disables the recovering logic Annex B defined. As a result, you can find errors
 		// early. This is similar to the strict mode. Therefore, the u flag lets us work better with
 		// regular expressions.
-		'require-unicode-regexp': 'error',
+		'require-unicode-regexp': 'off',
 
 		// Disallow generator functions that do not have yield
 		'require-yield': 'error',

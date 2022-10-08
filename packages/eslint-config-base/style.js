@@ -30,7 +30,7 @@ module.exports = {
 
 		// Require braces in arrow function body
 		// This rule can enforce the use of braces around arrow function body.
-		'arrow-body-style': ['error', 'as-needed', { requireReturnForObjectLiteral: true }],
+		'arrow-body-style': ['warn', 'as-needed', { requireReturnForObjectLiteral: true }],
 
 		// Require parens in arrow function arguments
 		// Arrow functions can omit parentheses when they have exactly one parameter. Since their main
@@ -56,7 +56,7 @@ module.exports = {
 		// opening curly brace of a block is placed on the same line as its corresponding statement or
 		// declaration.
 		'brace-style': [
-			'error',
+			'off',
 			'1tbs',
 			{
 				allowSingleLine: true
@@ -401,7 +401,7 @@ module.exports = {
 		// Disallow Nested Ternaries
 		// The no-nested-ternary rule aims to increase the clarity and readability of code by
 		// disallowing the use of nested ternary expressions.
-		'no-nested-ternary': 'error',
+		'no-nested-ternary': 'off',
 
 		// Disallow trailing spaces at the end of lines
 		// Sometimes in the course of editing files, you can end up with extra whitespace at the end of

@@ -103,7 +103,10 @@ module.exports = {
 				selector: 'default',
 				format: ['strictCamelCase']
 			},
-
+			{
+				selector: 'function',
+				format: ['strictCamelCase', 'StrictPascalCase']
+			},
 			{
 				selector: 'variable',
 				format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE']
@@ -182,7 +185,7 @@ module.exports = {
 		// Use for-of loops instead of standard for loops over arrays
 		// This rule recommends a for-of loop when the loop index is only used to read from an array
 		// that is being iterated.
-		'@typescript-eslint/prefer-for-of': 'warn',
+		'@typescript-eslint/prefer-for-of': 'off',
 
 		// Enforce includes method over indexOf method
 		// This rule is aimed at suggesting includes method if indexOf method was used to check whether
