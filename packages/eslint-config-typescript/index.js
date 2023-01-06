@@ -113,11 +113,11 @@ module.exports = {
 		'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 
 		// Enforce consistent usage of type imports
-
 		'@typescript-eslint/consistent-type-imports': [
 			'error',
 			{
 				prefer: 'type-imports',
+				fixStyle: 'inline-type-imports',
 				disallowTypeAnnotations: true
 			}
 		],
@@ -175,9 +175,9 @@ module.exports = {
 				default: [
 					'static-field',
 					'field',
+					'constructor',
 					'public-static-get',
 					'public-static-method',
-					'constructor',
 					'public-get',
 					'method',
 					'protected-get',
@@ -375,7 +375,7 @@ module.exports = {
 			base.rules['no-throw-literal'],
 			{
 				allowThrowingAny: false,
-				allowThrowingUnknown: false
+				allowThrowingUnknown: true
 			}
 		],
 		'no-throw-literal': 'off',
@@ -539,7 +539,7 @@ module.exports = {
 
 		// Enforces unbound methods are called with their expected scope
 		// Class functions don't preserve the class scope when passed as standalone variables.
-		'@typescript-eslint/unbound-method': 'error',
+		'@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
 
 		// Require that function parameters are typed as readonly
 		// Disabled, too cumbersome to write `readonly` everywhere.
