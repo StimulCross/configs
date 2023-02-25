@@ -28,8 +28,8 @@
 	],
 	"dependencies": {
 		"@stimulcross/eslint-config-base": "^1.4.0",
-		"@typescript-eslint/eslint-plugin": "^5.36.2",
-		"@typescript-eslint/parser": "^5.33.0",
-		"eslint-import-resolver-typescript": "^3.4.0"
+		"@typescript-eslint/eslint-plugin": "^5.53.0",
+		"@typescript-eslint/parser": "^5.53.0",
+		"eslint-import-resolver-typescript": "^3.5.3"
 	}
 }

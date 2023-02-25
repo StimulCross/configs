@@ -11,12 +11,12 @@
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "See LICENSE file in each package",
 	"devDependencies": {
-		"@commitlint/cli": "^17.0.3",
-		"eslint": "8.25.0",
-		"husky": "^8.0.1",
-		"lerna": "^5.6.1",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.7.1"
+		"@commitlint/cli": "^17.4.4",
+		"eslint": "8.34.0",
+		"husky": "^8.0.3",
+		"lerna": "^6.5.1",
+		"lint-staged": "^13.1.2",
+		"prettier": "^2.8.4"
 	},
 	"scripts": {
 		"lint": "eslint --ext js,ts packages",

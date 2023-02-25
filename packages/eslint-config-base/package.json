@@ -28,7 +28,7 @@
 		"LICENSE"
 	],
 	"dependencies": {
-		"eslint-plugin-import": "^2.26.0",
-		"eslint-plugin-jsdoc": "^39.3.6"
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jsdoc": "^40.0.0"
 	}
 }
