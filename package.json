@@ -20,8 +20,8 @@
 	},
 	"scripts": {
 		"lint": "eslint --ext js,ts packages",
-		"prettier:check": "prettier --check .",
-		"prettier:fix": "prettier --write .",
+		"format:check": "prettier --check .",
+		"format:fix": "prettier --write .",
 		"prepare": "husky install"
 	}
 }
