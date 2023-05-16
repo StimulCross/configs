@@ -29,6 +29,6 @@
 	],
 	"dependencies": {
 		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-jsdoc": "^40.0.0"
+		"eslint-plugin-jsdoc": "^44.2.4"
 	}
 }
