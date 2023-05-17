@@ -11,25 +11,30 @@
 const globs = require('./globs');
 
 module.exports = {
+	extends: ['plugin:jsdoc/recommended'],
+
 	plugins: ['import', 'jsdoc'],
 
 	rules: {
-		'jsdoc/check-alignment': 'error',
-		'jsdoc/check-indentation': 'error',
-		'jsdoc/check-param-names': 'error',
 		'jsdoc/require-param': [
-			'error',
+			'warn',
 			{
-				exemptedBy: ['inheritDoc', 'private', 'internal']
+				exemptedBy: ['inheritdoc', 'private', 'internal']
 			}
 		],
-		'jsdoc/check-tag-names': [
-			'error',
+		'jsdoc/require-returns': 0,
+		'jsdoc/multiline-blocks': [
+			'warn',
 			{
-				definedTags: ['inheritDoc', 'expandParams', 'neverExpand', 'hideProtected', 'eventListener']
+				noSingleLineBlocks: true,
+				singleLineTags: ['*']
 			}
 		],
-		'jsdoc/newline-after-description': ['error', 'always'],
+		'jsdoc/no-blank-block-descriptions': 0,
+		'jsdoc/no-blank-blocks': 0,
+		'jsdoc/require-asterisk-prefix': 1,
+		'jsdoc/require-hyphen-before-param-description': ['warn', 'never'],
+		'jsdoc/tag-lines': ['warn', 'any', { startLines: 1 }],
 
 		// Require Consistent Returns
 		// This rule is aimed at ensuring all return statements either specify a value or don't specify

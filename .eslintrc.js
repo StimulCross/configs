@@ -16,6 +16,7 @@ module.exports = {
 			{
 				version: '>=16'
 			}
-		]
+		],
+		'jsdoc/check-values': ['warn', { allowedLicenses: true }]
 	}
 };
