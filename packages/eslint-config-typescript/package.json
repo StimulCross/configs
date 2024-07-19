@@ -3,7 +3,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.6.0",
+	"version": "1.6.1",
 	"description": "Personal ESLint configuration for TypeScript.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"homepage": "https://github.com/StimulCross/configs#readme",
@@ -27,7 +27,7 @@
 		"LICENSE"
 	],
 	"dependencies": {
-		"@stimulcross/eslint-config-base": "^1.6.0",
+		"@stimulcross/eslint-config-base": "^1.6.1",
 		"@typescript-eslint/eslint-plugin": "^7.16.1",
 		"@typescript-eslint/parser": "^7.16.1",
 		"eslint-import-resolver-typescript": "^3.6.1"
