@@ -45,7 +45,7 @@ module.exports = {
 		// Enforce a maximum number of classes per file
 		// Files containing multiple classes can often result in a less navigable and poorly structured
 		// codebase. Best practice is to keep each file limited to a single responsibility.
-		'max-classes-per-file': ['error', 1],
+		'max-classes-per-file': ['warn', 1],
 
 		// Disallow using an async function as a Promise executor
 		// This rule aims to disallow async Promise executor functions.
@@ -55,7 +55,7 @@ module.exports = {
 		// Performing an operation on each element of an iterable is a common task. However, performing
 		// an await as part of each operation is an indication that the program is not taking full
 		// advantage of the parallelization benefits of async/await.
-		'no-await-in-loop': 'off',
+		'no-await-in-loop': 'warn',
 
 		// Disallow lexical declarations in case/default clauses
 		// This rule disallows lexical declarations (let, const, function and class) in case/default
@@ -592,12 +592,12 @@ module.exports = {
 		// Require Radix Parameter
 		// This rule is aimed at preventing the unintended conversion of a string to a number of a
 		// different base than intended.
-		radix: 'error',
+		radix: 'warn',
 
 		// Disallow async functions which have no await expression
 		// Async functions which have no await expression may be the unintentional result of
 		// refactoring.
-		'require-await': 'off',
+		'require-await': 'warn',
 
 		// Enforce the use of u flag on RegExp
 		// RegExp u flag has two effects:
@@ -607,7 +607,7 @@ module.exports = {
 		// The u flag disables the recovering logic Annex B defined. As a result, you can find errors
 		// early. This is similar to the strict mode. Therefore, the u flag lets us work better with
 		// regular expressions.
-		'require-unicode-regexp': 'off',
+		'require-unicode-regexp': 'warn',
 
 		// Disallow generator functions that do not have yield
 		'require-yield': 'error',
@@ -697,7 +697,6 @@ module.exports = {
 			}
 		]
 	},
-
 	overrides: [
 		{
 			files: globs.configs,

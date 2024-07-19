@@ -349,11 +349,9 @@ module.exports = {
 		// Prefer the newer ES6-style imports over require().
 		'@typescript-eslint/no-require-imports': 'error',
 
-		// For some reason we need to make a copy of the rule configuration object for ESLint v8.12.0 because it
-		// complains that the object must not have additional properties. I suspect that something is mutating our
-		// object along the way.
-		// TODO: remove this once this is fixed in ESLint
-		'@typescript-eslint/no-shadow': [base.rules['no-shadow'][0], { ...base.rules['no-shadow'][1] }],
+		// Disallow Shadowing
+		// This rule aims to eliminate shadowed variable declarations.
+		'@typescript-eslint/no-shadow': base.rules['no-shadow'],
 		'no-shadow': 'off',
 
 		// Disallow aliasing this
@@ -385,7 +383,7 @@ module.exports = {
 		// to be considered "necessary". Conversely, any expression that always evaluates to truthy or
 		// always evaluates to falsy, as determined by the type of the expression, is considered
 		// unnecessary and will be flagged by this rule.
-		'@typescript-eslint/no-unnecessary-condition': 'error',
+		'@typescript-eslint/no-unnecessary-condition': 'warn',
 
 		// Warns when a namespace qualifier is unnecessary
 		// This rule aims to let users know when a namespace or enum qualifier is unnecessary, whether

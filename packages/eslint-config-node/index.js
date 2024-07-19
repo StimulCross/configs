@@ -163,7 +163,6 @@ module.exports = {
 			env: {
 				es6: true
 			},
-
 			rules: {
 				// Allow ES Modules to be used in these source files
 				'node/no-unsupported-features/es-syntax': [
