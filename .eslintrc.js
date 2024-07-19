@@ -5,8 +5,8 @@ module.exports = {
 
 	extends: [
 		'./packages/eslint-config-node',
-		'./packages/eslint-config-node/optional.js',
-		'./packages/eslint-config-node/style.js'
+		'./packages/eslint-config-node/optional',
+		'./packages/eslint-config-node/style'
 	],
 
 	rules: {
