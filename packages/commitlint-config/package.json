@@ -16,7 +16,6 @@
 	"main": "index.js",
 	"files": [
 		"index.js",
-		"lerna.js",
 		"LICENSE",
 		"README.md"
 	],
