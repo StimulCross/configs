@@ -4,7 +4,7 @@ module.exports = {
 	ignorePatterns: ['node_modules', '!.*.js'],
 
 	extends: [
-		'./packages/eslint-config-node/v16.js',
+		'./packages/eslint-config-node',
 		'./packages/eslint-config-node/optional.js',
 		'./packages/eslint-config-node/style.js'
 	],
@@ -14,7 +14,7 @@ module.exports = {
 		'node/no-unsupported-features/es-syntax': [
 			'error',
 			{
-				version: '>=16'
+				version: '>=20'
 			}
 		],
 		'jsdoc/check-values': ['warn', { allowedLicenses: true }]
