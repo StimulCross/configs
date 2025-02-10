@@ -1,21 +1,19 @@
-#!/usr/bin/env node
+/* eslint-disable no-console, node/no-process-exit */
 
-// TAKEN FROM https://github.com/twurple/twurple/blob/main/publish.mjs
-
-import { exec as _exec, spawn } from 'child_process';
-import util from 'util';
+import { exec as _exec, spawn } from 'node:child_process';
+import util from 'node:util';
 
 const exec = util.promisify(_exec);
 
-async function runYarn(args) {
-	const isWindows = /^win/.test(process.platform);
+function runYarn(args) {
+	const isWindows = process.platform.startsWith('win');
 	return runAndPassOutput(isWindows ? 'yarn.cmd' : 'yarn', args);
 }
 
-async function runAndPassOutput(cmd, args) {
+function runAndPassOutput(cmd, args) {
 	return new Promise(resolve => {
 		const proc = spawn(cmd, args, {
-			stdio: 'inherit'
+			stdio: 'inherit',
 		});
 		proc.on('exit', code => {
 			if (code) {
@@ -54,11 +52,9 @@ await runYarn([
 	'pre',
 	versionType,
 	'-m',
-	'build: release version %v'
+	'build: release version %v',
 ]);
 
-if (versionType.startsWith('pre')) {
-	await runYarn(['lerna', 'publish', 'from-package', '--dist-tag', 'next']);
-} else {
-	await runYarn(['lerna', 'publish', 'from-package']);
-}
+await (versionType.startsWith('pre')
+	? runYarn(['lerna', 'publish', 'from-package', '--dist-tag', 'next'])
+	: runYarn(['lerna', 'publish', 'from-package']));

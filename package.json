@@ -1,9 +1,7 @@
 {
 	"name": "@stimulcross/configs",
 	"private": true,
-	"workspaces": [
-		"packages/*"
-	],
+	"workspaces": ["packages/*"],
 	"version": "1.4.1",
 	"description": "Set of various configs.",
 	"main": "index.js",
@@ -11,17 +9,20 @@
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "See LICENSE file in each package",
 	"devDependencies": {
-		"@commitlint/cli": "^18.6.1",
-		"eslint": "8.57.0",
-		"husky": "^8.0.3",
-		"lerna": "^8.1.6",
-		"lint-staged": "^15.2.7",
-		"prettier": "^3.3.3"
+		"@biomejs/biome": "^1.9.4",
+		"@commitlint/cli": "^19.7.1",
+		"eslint": "^9.20.0",
+		"husky": "^9.1.7",
+		"lerna": "^8.1.9",
+		"lint-staged": "^15.4.3",
+		"prettier": "^3.5.0"
 	},
 	"scripts": {
-		"lint": "eslint --ext js,ts packages",
-		"format:check": "prettier --check .",
-		"format:fix": "prettier --write .",
-		"prepare": "husky install"
-	}
+		"lint": "eslint",
+		"lint:fix": "eslint --fix",
+		"format:check": "biome format .",
+		"format:fix": "biome format . --fix",
+		"prepare": "husky"
+	},
+	"lint-staged": {}
 }

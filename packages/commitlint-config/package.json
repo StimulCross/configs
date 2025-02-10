@@ -7,24 +7,18 @@
 	"description": "Personal configuration for commitlint.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"homepage": "https://github.com/StimulCross/configs#readme",
-	"license": "BSD-3-Clause",
-	"contributors": [
-		"Pavel Prichodko <prichodko.p@gmail.com>",
-		"Robert Rossmann <rr.rossmann@me.com>",
-		"Danny Kijkov <daniel.kijkov@strv.com>"
-	],
-	"main": "index.js",
-	"files": [
-		"index.js",
-		"LICENSE",
-		"README.md"
-	],
+	"license": "MIT",
+	"main": "index.cjs",
+	"engines": {
+		"node": ">=20"
+	},
+	"files": ["index.cjs", "LICENSE", "README.md"],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/StimulCross/configs.git",
-		"directory": "packages/eslint-config-base"
+		"directory": "packages/commitlint-config"
 	},
 	"dependencies": {
-		"@commitlint/config-conventional": "^18.6.3"
+		"@commitlint/config-conventional": "^19.7.1"
 	}
 }

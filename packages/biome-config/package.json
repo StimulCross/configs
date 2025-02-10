@@ -1,11 +1,12 @@
 {
-	"name": "@stimulcross/prettier-config",
+	"name": "@stimulcross/biome-config",
 	"publishConfig": {
 		"access": "public"
 	},
 	"version": "1.6.2",
-	"description": "Personal configuration for Prettier.",
+	"description": "Personal configuration for Biome. Only formatter options are included",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
+	"type": "module",
 	"engines": {
 		"node": ">=20"
 	},
@@ -13,9 +14,11 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/StimulCross/configs.git",
-		"directory": "packages/prettier-config"
+		"directory": "packages/biome-config"
 	},
 	"license": "MIT",
-	"main": "index.cjs",
-	"files": ["index.cjs", "README.md", "LICENSE"]
+	"exports": {
+		"./formatter": "./biome-formatter.json"
+	},
+	"files": ["biome-formatter.json", "README.md", "LICENSE"]
 }

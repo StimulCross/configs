@@ -6,29 +6,31 @@
 	"version": "1.6.2",
 	"description": "Personal base ESLint configuration.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
+	"engines": {
+		"node": ">=20"
+	},
+	"type": "module",
 	"homepage": "https://github.com/StimulCross/configs#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/StimulCross/configs.git",
 		"directory": "packages/eslint-config-base"
 	},
-	"license": "BSD-3-Clause",
-	"contributors": [
-		"Pavel Prichodko <prichodko.p@gmail.com>",
-		"Robert Rossmann <rr.rossmann@me.com>",
-		"Danny Kijkov <daniel.kijkov@strv.com>"
-	],
-	"main": "index.js",
-	"files": [
-		"globs.js",
-		"optional.js",
-		"style.js",
-		"index.js",
-		"README.md",
-		"LICENSE"
-	],
+	"license": "MIT",
+	"exports": {
+		".": "./index.mjs",
+		"./style": "./style.mjs",
+		"./jsdoc": "./jsdoc.mjs"
+	},
+	"files": ["index.mjs", "jsdoc.mjs", "style.mjs", "README.md", "LICENSE"],
 	"dependencies": {
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-jsdoc": "^48.7.0"
+		"@stylistic/eslint-plugin": "^3.0.1",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-jsdoc": "^50.6.3",
+		"eslint-plugin-unicorn": "^56.0.1",
+		"globals": "^15.14.0"
+	},
+	"peerDependencies": {
+		"eslint": "^9"
 	}
 }
