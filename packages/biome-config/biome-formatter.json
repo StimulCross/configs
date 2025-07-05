@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -7,14 +7,14 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": [
-			"**/dist/**",
-			"**/build/**",
-			"**/node_modules/**",
-			"**/.turbo/**",
-			"**/.nx/**",
-			"**/.idea/**",
-			"**/.husky/**"
+		"includes": [
+			"!**/dist/**",
+			"!**/build/**",
+			"!**/node_modules/**",
+			"!**/.turbo/**",
+			"!**/.nx/**",
+			"!**/.idea/**",
+			"!**/.husky/**"
 		]
 	},
 	"formatter": {
@@ -25,12 +25,13 @@
 		"lineWidth": 120,
 		"bracketSpacing": true
 	},
-	"organizeImports": {
-		"enabled": false
-	},
 	"linter": {
 		"enabled": false
 	},
+	"assist": {
+		"enabled": false
+	},
+
 	"javascript": {
 		"parser": {
 			"unsafeParameterDecoratorsEnabled": true

@@ -9,7 +9,7 @@
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "See LICENSE file in each package",
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
+		"@biomejs/biome": "^2.0.6",
 		"@commitlint/cli": "^19.8.1",
 		"eslint": "^9.20.0",
 		"husky": "^9.1.7",
