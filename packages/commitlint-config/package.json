@@ -19,6 +19,6 @@
 		"directory": "packages/commitlint-config"
 	},
 	"dependencies": {
-		"@commitlint/config-conventional": "^19.7.1"
+		"@commitlint/config-conventional": "^19.8.1"
 	}
 }
