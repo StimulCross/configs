@@ -31,16 +31,21 @@
 	"assist": {
 		"enabled": false
 	},
-
 	"javascript": {
 		"parser": {
 			"unsafeParameterDecoratorsEnabled": true
 		},
 		"formatter": {
+			"enabled": true,
 			"quoteStyle": "single",
 			"arrowParentheses": "asNeeded",
 			"semicolons": "always",
-			"trailingCommas": "all"
+			"trailingCommas": "all",
+			"lineWidth": 120,
+			"indentStyle": "tab",
+			"indentWidth": 4,
+			"bracketSpacing": true,
+			"lineEnding": "lf"
 		}
 	},
 	"json": {

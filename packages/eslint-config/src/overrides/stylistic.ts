@@ -1,0 +1,41 @@
+import type { StylisticOptions } from '@antfu/eslint-config'
+
+export default {
+	indent: 'tab',
+	quotes: 'single',
+	jsx: true,
+	semi: false,
+	braceStyle: 'stroustrup',
+	overrides: {
+		'style/array-bracket-spacing': ['error', 'never'],
+		'style/arrow-parens': ['error', 'as-needed'],
+		'style/comma-dangle': ['error', 'always-multiline'],
+		'style/no-extra-parens': ['warn', 'all', {
+			conditionalAssign: true,
+			returnAssign: false,
+			nestedBinaryExpressions: false,
+			ignoreJSX: 'all',
+			enforceForSequenceExpressions: false,
+			ignoredNodes: [
+				'SpreadElement[argument.type=ConditionalExpression]',
+				'SpreadElement[argument.type=LogicalExpression]',
+				'SpreadElement[argument.type=AwaitExpression]',
+			],
+		}],
+		'style/object-curly-spacing': ['warn', 'always'],
+		'style/padding-line-between-statements': [
+			'error',
+			{ blankLine: 'always', prev: '*', next: ['return', 'break', 'continue'] },
+			{ blankLine: 'always', prev: 'import', next: '*' },
+			{ blankLine: 'any', prev: 'import', next: 'import' },
+			{ blankLine: 'always', prev: '*', next: ['block-like', 'for', 'if', 'multiline-expression'] },
+			{ blankLine: 'never', prev: 'case', next: ['block-like', 'for', 'if', 'multiline-expression'] },
+			{ blankLine: 'always', prev: ['block-like', 'for', 'if', 'multiline-expression'], next: '*' },
+			{ blankLine: 'always', prev: '*', next: ['export', 'cjs-export'] },
+			{ blankLine: 'any', prev: ['export', 'cjs-export'], next: ['export', 'cjs-export'] },
+			{ blankLine: 'always', prev: '*', next: ['enum', 'type', 'interface'] },
+			{ blankLine: 'always', prev: ['enum', 'type', 'interface'], next: '*' },
+			{ blankLine: 'any', prev: 'type', next: 'type' },
+		],
+	},
+} satisfies StylisticOptions

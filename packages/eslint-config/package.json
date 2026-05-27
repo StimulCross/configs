@@ -1,0 +1,65 @@
+{
+	"name": "@stimulcross/eslint-config",
+	"type": "module",
+	"version": "0.0.1",
+	"packageManager": "pnpm@11.3.0",
+	"description": "Personal ESLint configuration.",
+	"author": "Stimul Cross <stimulcross@gmail.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/StimulCross/configs#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StimulCross/configs.git",
+		"directory": "packages/eslint-config-base"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"!dist/**/*.d.ts.map",
+		"!dist/**/*.js.map",
+		"LICENSE",
+		"README.md",
+		"dist"
+	],
+	"engines": {
+		"node": "^20.19.0 || ^22.12.0 || >=23.0.0"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"rebuild": "pnpm run clear && pnpm run build",
+		"watch": "tsc -p tsconfig.build.json -w",
+		"clear": "del-cli dist",
+		"check-types": "tsc --noEmit",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix"
+	},
+	"peerDependencies": {
+		"eslint": "^10"
+	},
+	"dependencies": {
+		"@antfu/eslint-config": "^9.0.0",
+		"eslint-flat-config-utils": "^3.2.0"
+	},
+	"publishConfig": {
+		"access": "public",
+		"exports": {
+			".": {
+				"types": "./dist/index.d.ts",
+				"import": "./dist/index.js",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"devDependencies": {
+		"@types/node": "^25.9.1",
+		"eslint": "^10.4.0"
+	}
+}

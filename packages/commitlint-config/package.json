@@ -1,24 +1,28 @@
 {
 	"name": "@stimulcross/commitlint-config",
-	"publishConfig": {
-		"access": "public"
-	},
 	"version": "2.0.0",
 	"description": "Personal configuration for commitlint.",
-	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"homepage": "https://github.com/StimulCross/configs#readme",
-	"license": "MIT",
-	"main": "index.cjs",
-	"engines": {
-		"node": ">=20"
-	},
-	"files": ["index.cjs", "LICENSE", "README.md"],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/StimulCross/configs.git",
 		"directory": "packages/commitlint-config"
 	},
+	"license": "MIT",
+	"author": "Stimul Cross <stimulcross@gmail.com>",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"LICENSE",
+		"README.md"
+	],
 	"dependencies": {
-		"@commitlint/config-conventional": "^19.8.1"
+		"@commitlint/config-conventional": "^20.4.3"
+	},
+	"engines": {
+		"node": "^20.19.0 || ^22.12.0 || >=23.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

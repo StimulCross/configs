@@ -1,28 +1,38 @@
 {
 	"name": "@stimulcross/configs",
-	"private": true,
-	"workspaces": ["packages/*"],
+	"type": "module",
 	"version": "2.0.0",
-	"description": "Set of various configs.",
-	"main": "index.js",
-	"repository": "git@github.com:StimulCross/configs.git",
+	"private": true,
+	"packageManager": "pnpm@11.3.0",
+	"description": "A set of various configs",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "See LICENSE file in each package",
-	"devDependencies": {
-		"@biomejs/biome": "^2.0.6",
-		"@commitlint/cli": "^19.8.1",
-		"eslint": "^9.20.0",
-		"husky": "^9.1.7",
-		"lerna": "^8.1.9",
-		"lint-staged": "^15.4.3",
-		"prettier": "^3.5.0"
-	},
+	"repository": "git@github.com:StimulCross/configs.git",
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
-		"lint": "eslint",
-		"lint:fix": "eslint --fix",
 		"format:check": "biome format .",
 		"format:fix": "biome format . --fix",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix",
 		"prepare": "husky"
 	},
-	"lint-staged": {}
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.15",
+		"@commitlint/cli": "^21.0.1",
+		"@stimulcross/eslint-config": "workspace:*",
+		"@types/node": "^25.9.1",
+		"del-cli": "^7.0.0",
+		"eslint": "^10.4.0",
+		"eslint-flat-config-utils": "^3.2.0",
+		"eslint-plugin-format": "^2.0.1",
+		"husky": "^9.1.7",
+		"lerna": "^9.0.7",
+		"prettier": "^3.8.3",
+		"typescript": "^6.0.3"
+	},
+	"nano-staged": {
+		"*": "eslint --fix"
+	}
 }
