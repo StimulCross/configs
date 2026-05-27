@@ -1,1 +1,0 @@
-# `@stimulcross/eslint-config-node`
