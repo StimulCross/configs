@@ -39,7 +39,9 @@
 		"clear": "del-cli dist",
 		"check-types": "tsc --noEmit",
 		"lint": "eslint",
-		"lint:fix": "eslint --fix"
+		"lint:fix": "eslint --fix",
+		"preversion": "pnpm run rebuild && pnpm run lint",
+		"prepublishOnly": "pnpm run rebuild && pnpm run lint"
 	},
 	"peerDependencies": {
 		"eslint": "^10"
