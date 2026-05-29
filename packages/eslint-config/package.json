@@ -1,7 +1,7 @@
 {
 	"name": "@stimulcross/eslint-config",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"packageManager": "pnpm@11.4.0",
 	"description": "Personal ESLint configuration.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
