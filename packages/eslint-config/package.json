@@ -2,7 +2,7 @@
 	"name": "@stimulcross/eslint-config",
 	"type": "module",
 	"version": "0.0.1",
-	"packageManager": "pnpm@11.3.0",
+	"packageManager": "pnpm@11.4.0",
 	"description": "Personal ESLint configuration.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "MIT",
@@ -10,7 +10,7 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/StimulCross/configs.git",
-		"directory": "packages/eslint-config-base"
+		"directory": "packages/eslint-config"
 	},
 	"exports": {
 		".": {
