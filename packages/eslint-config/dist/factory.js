@@ -1,4 +1,5 @@
 import { antfu } from '@antfu/eslint-config';
+import e18eOverrides from './overrides/e18e.js';
 import importsOverrides from './overrides/imports.js';
 import javascriptOverrides from './overrides/javascript.js';
 import stylisticDefaults from './overrides/stylistic.js';
@@ -90,11 +91,10 @@ export async function factory(options,
     }
     // e18e
     if (cleanOptions.e18e !== false) {
+        const userE18e = typeof cleanOptions.e18e === 'object' ? cleanOptions.e18e : {};
         cleanOptions.e18e = {
-            modernization: true,
-            moduleReplacements: true,
-            performanceImprovements: true,
-            ...typeof cleanOptions.e18e === 'boolean' ? {} : cleanOptions.e18e,
+            ...userE18e,
+            overrides: merge('e18e', cleanOptions, e18eOverrides),
         };
     }
     delete cleanOptions.overrides;
