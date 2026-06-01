@@ -26,7 +26,6 @@ export const typescriptOverrides: Rules = {
 	'ts/no-wrapper-object-types': 'error',
 	'ts/prefer-for-of': 'warn',
 	'ts/prefer-namespace-keyword': 'error',
-	'ts/prefer-optional-chain': 'warn',
 	'ts/triple-slash-reference': 'error',
 }
 
@@ -101,6 +100,7 @@ export const typescriptTypeAwareOverrides: Rules = {
 	'ts/only-throw-error': 'error',
 	'ts/prefer-includes': 'error',
 	'ts/prefer-nullish-coalescing': ['error', { ignorePrimitives: true }],
+	'ts/prefer-optional-chain': 'warn',
 	'ts/prefer-readonly': 'error',
 	'ts/prefer-regexp-exec': 'warn',
 	'ts/prefer-string-starts-ends-with': 'error',
