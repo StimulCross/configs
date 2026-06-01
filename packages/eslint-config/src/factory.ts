@@ -32,10 +32,12 @@ function merge(
 	options: OptionsConfig,
 	myDefaults: Rules = {},
 ): Rules {
+	// eslint-disable-next-line ts/no-explicit-any
 	const userGroup = typeof options[key] === 'object' ? (options[key] as Record<string, any>) : {}
 	// eslint-disable-next-line ts/no-unsafe-assignment, ts/no-explicit-any
 	const legacyOverrides = (options.overrides as Record<string, any> | undefined)?.[key]
 
+	// eslint-disable-next-line ts/consistent-type-assertions
 	return {
 		...myDefaults,
 		...legacyOverrides,
