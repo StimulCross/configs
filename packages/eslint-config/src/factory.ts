@@ -45,11 +45,12 @@ function merge(
 	} as Rules
 }
 
-export async function factory(
+// eslint-disable-next-line ts/promise-function-async
+export function factory(
 	options?: OptionsConfig & Omit<TypedFlatConfigItem, 'files' | 'ignores'>,
 	// eslint-disable-next-line ts/no-explicit-any
 	...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
-): Promise<FlatConfigComposer<TypedFlatConfigItem, ConfigNames>> {
+): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
 	const userFusedConfig: TypedFlatConfigItem = {}
 	const cleanOptions: OptionsConfig = { ...options }
 
@@ -136,7 +137,7 @@ export async function factory(
 
 	delete cleanOptions.overrides
 
-	return await antfu(
+	return antfu(
 		cleanOptions,
 		Object.keys(userFusedConfig).length > 0 ? userFusedConfig : {},
 		...userConfigs,
