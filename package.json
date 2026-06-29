@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "2.0.0",
 	"private": true,
-	"packageManager": "pnpm@11.3.0",
+	"packageManager": "pnpm@11.9.0",
 	"description": "A set of various configs",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "See LICENSE file in each package",
