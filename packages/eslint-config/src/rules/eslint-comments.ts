@@ -1,0 +1,8 @@
+import type { SourceRules } from '../types/policy.ts'
+
+export const rules = {
+	'eslint-comments/no-aggregating-enable': 'error',
+	'eslint-comments/no-duplicate-disable': 'error',
+	'eslint-comments/no-unlimited-disable': 'error',
+	'eslint-comments/no-unused-enable': 'error',
+} satisfies SourceRules

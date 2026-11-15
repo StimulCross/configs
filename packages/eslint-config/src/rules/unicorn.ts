@@ -1,12 +1,38 @@
-import type { OptionsUnicorn } from '@antfu/eslint-config'
+import type { SourceRules } from '../types/policy.ts'
 
-export default {
+export const rules = {
+	'unicorn/consistent-empty-array-spread': 'error',
+	'unicorn/error-message': 'error',
+	'unicorn/escape-case': 'error',
+	'unicorn/new-for-builtins': 'error',
+	'unicorn/no-instanceof-builtins': 'error',
+	'unicorn/no-new-array': 'error',
+	'unicorn/no-new-buffer': 'error',
+	'unicorn/number-literal-case': 'error',
+	'unicorn/prefer-dom-node-text-content': 'error',
+	'unicorn/prefer-includes': 'off',
+	'unicorn/prefer-node-protocol': 'error',
+	'unicorn/prefer-number-properties': 'error',
+	'unicorn/prefer-string-starts-ends-with': 'error',
+	'unicorn/prefer-type-error': 'error',
+	'unicorn/throw-new-error': 'error',
 	'unicorn/better-regex': 'warn',
-	'unicorn/catch-error-name': ['error', { name: 'err' }],
+	'unicorn/catch-error-name': [
+		'error',
+		{
+			name: 'err',
+		},
+	],
 	'unicorn/consistent-function-scoping': 'error',
 	'unicorn/expiring-todo-comments': 'warn',
 	'unicorn/explicit-length-check': 'error',
-	'unicorn/filename-case': ['error', { case: 'kebabCase', multipleFileExtensions: true }],
+	'unicorn/filename-case': [
+		'error',
+		{
+			case: 'kebabCase',
+			multipleFileExtensions: true,
+		},
+	],
 	'unicorn/no-anonymous-default-export': 'error',
 	'unicorn/no-await-expression-member': 'error',
 	'unicorn/no-await-in-promise-methods': 'error',
@@ -72,13 +98,13 @@ export default {
 	'unicorn/relative-url-style': 'error',
 	'unicorn/require-array-join-separator': 'error',
 	'unicorn/require-number-to-fixed-digits-argument': 'error',
-	'unicorn/switch-case-braces': ['error', 'avoid'],
-
-	// e18e overlaps
+	'unicorn/switch-case-braces': [
+		'error',
+		'avoid',
+	],
 	'unicorn/prefer-array-some': 'off',
 	'unicorn/prefer-at': 'off',
 	'unicorn/prefer-date-now': 'off',
-	'unicorn/prefer-includes': 'off',
 	'unicorn/prefer-regexp-test': 'off',
 	'unicorn/prefer-spread': 'off',
-} satisfies OptionsUnicorn['overrides']
+} satisfies SourceRules

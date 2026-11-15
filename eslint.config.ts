@@ -1,13 +1,32 @@
-import { defineConfig } from '@stimulcross/eslint-config'
+import format from 'eslint-plugin-format'
+import { defineConfig, globs } from './packages/eslint-config/src/index.js'
 
 export default defineConfig({
-	pnpm: true,
-	node: true,
-	perfectionist: true,
-	formatters: {
-		markdown: 'dprint',
-		html: 'prettier',
-		css: 'prettier',
+	rootDir: import.meta.dirname,
+	integrations: { pnpm: true, jsdoc: true },
+	typeAware: {
+		ignores: [
+			...globs.configs,
+			...globs.scripts,
+		],
 	},
-	typescript: { tsconfigPath: 'tsconfig.json' },
+	scopes: [
+
+	],
+}, {
+	plugins: { format },
+}, {
+	files: ['**/*.md'],
+	languageOptions: { parser: format.parserPlain },
+	rules: {
+		'format/dprint': [
+			'error',
+			{
+				indentWidth: 2,
+				quoteStyle: 'preferSingle',
+				useTabs: true,
+				language: 'markdown',
+			},
+		],
+	},
 })

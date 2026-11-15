@@ -1,0 +1,140 @@
+[
+  {
+    "integration": "javascript",
+    "plugin": "",
+    "rules": 295,
+    "schemasHash": "5a7e2e5d559bc4ab58d9080e45293701794be41cac8d5eff27a2c2486f518476",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "stylistic",
+    "plugin": "",
+    "rules": 103,
+    "schemasHash": "4f6a74af05cde273226e428a09348441974e707f6f8258a675ab634349458310",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "imports",
+    "plugin": "",
+    "rules": 12,
+    "schemasHash": "bf791ceeb430ac5eb37e23c22762bd220137ffbf351f556d579434b2213f48a9",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "unusedImports",
+    "plugin": "",
+    "rules": 2,
+    "schemasHash": "9bae7d07c3feb1f0553388e720b06a5ae7c8a9ac53ee6566de2691e5c9a10e61",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "eslintComments",
+    "plugin": "",
+    "rules": 9,
+    "schemasHash": "cfe3673d38094f07ae8750b3a0c92e2dae1f462e421d5fe96bebdf68bff77c7a",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "command",
+    "plugin": "",
+    "rules": 1,
+    "schemasHash": "fc53e53a2a69c3d3a36e18eedd3336763f41e8c658a23b5bb84b4908de0d4f5e",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "perfectionist",
+    "plugin": "",
+    "rules": 24,
+    "schemasHash": "4c471d4e914813d8444235a5163dbccce02a874f0a6b6830f7ff5ec9229bc454",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "node",
+    "plugin": "",
+    "rules": 45,
+    "schemasHash": "2e7d4e87c175ceb6b09996988bef8234af24b5fc52e7212beb136018dc3e14b3",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "jsdoc",
+    "plugin": "",
+    "rules": 78,
+    "schemasHash": "5be69c33940e6c9363e0397db3c71f122c9c18bd910d8a99d9167c98a6001cc2",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "e18e",
+    "plugin": "",
+    "rules": 30,
+    "schemasHash": "297f7c9468f5249c15a723e1ac84ae7d5c37bcfe4ef1dc2aba16c956f349e7a0",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "unicorn",
+    "plugin": "",
+    "rules": 396,
+    "schemasHash": "786d0b1e1e3b0daf80e1acff7f60845276378175012d2916b782c3beffa350e7",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "typescript",
+    "plugin": "",
+    "rules": 136,
+    "schemasHash": "2a1fc9b8c511dc0c2bc5e30125a146f2c03da75e6ea8c671ef3637cd5f68a9e1",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "regexp",
+    "plugin": "",
+    "rules": 82,
+    "schemasHash": "f9715ae0f8c2bf5712389532bf6d6b4e83337b2bf1b0f4b9a2300a0d5435c9bf",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "test",
+    "plugin": "",
+    "rules": 83,
+    "schemasHash": "41d042189582ef1517d78177554a0969ef34491a2e24d3e4a92527c0c961750c",
+    "optionsOmitted": [
+      {
+        "id": "test/valid-title",
+        "reason": "Upstream schema has an index signature incompatible with its boolean/array properties (TS2411)."
+      }
+    ]
+  },
+  {
+    "integration": "jsonc",
+    "plugin": "",
+    "rules": 44,
+    "schemasHash": "ef94812d4aea7d87b23399666d71887b64a02123bd4ec57522efe7877f16b9db",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "yaml",
+    "plugin": "",
+    "rules": 31,
+    "schemasHash": "e4897ba22437dc8de83c0585752d1dbdbb4e7d1b03be1d4c11920ddfc358c2ff",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "toml",
+    "plugin": "",
+    "rules": 24,
+    "schemasHash": "8a5ed407ead5961412c3ecaeee5ccc405efefe9de27edddb083bfd5e2feb54a9",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "markdown",
+    "plugin": "",
+    "rules": 21,
+    "schemasHash": "e4056b3312398d2e62fa23e1bf704f226305a994e927b136c2fa80cdea6c0de6",
+    "optionsOmitted": []
+  },
+  {
+    "integration": "pnpm",
+    "plugin": "",
+    "rules": 9,
+    "schemasHash": "2f9fa37995189a297e30eeff0c6c54d48ea660487933de034567a303634636cd",
+    "optionsOmitted": []
+  }
+]

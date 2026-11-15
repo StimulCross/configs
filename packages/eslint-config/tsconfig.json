@@ -1,9 +1,21 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"ignoreDeprecations": "6.0",
-		"rootDir": ".",
-		"outDir": "dist"
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"skipLibCheck": false,
+		"ignoreDeprecations": "6.0"
 	},
-	"exclude": ["node_modules", "dist"]
+	"files": [
+		"src/index.ts",
+		"src/types/vendor.d.ts"
+	],
+	"include": [
+		"scripts/**/*.ts",
+		"tests/**/*.ts"
+	],
+	"exclude": [
+		"dist",
+		"node_modules"
+	]
 }

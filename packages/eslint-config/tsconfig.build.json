@@ -2,10 +2,20 @@
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
 		"rootDir": "src",
+		"rewriteRelativeImportExtensions": true,
 		"declaration": true,
-		"declarationMap": true,
-		"outDir": "dist"
+		"declarationMap": false,
+		"noEmit": false,
+		"outDir": "dist",
+		"sourceMap": false
 	},
-	"include": ["src"],
-	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+	"files": [
+		"src/index.ts",
+		"src/types/vendor.d.ts"
+	],
+	"include": [],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
 }

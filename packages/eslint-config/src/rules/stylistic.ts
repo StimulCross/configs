@@ -1,0 +1,480 @@
+import type { SourceRules } from '../types/policy.ts'
+
+export const rules = {
+	'style/array-bracket-spacing': [
+		'error',
+		'never',
+	],
+	'style/arrow-parens': [
+		'error',
+		'as-needed',
+	],
+	'style/arrow-spacing': [
+		'error',
+		{
+			after: true,
+			before: true,
+		},
+	],
+	'style/block-spacing': [
+		'error',
+		'always',
+	],
+	'style/brace-style': [
+		'error',
+		'stroustrup',
+		{
+			allowSingleLine: true,
+		},
+	],
+	'style/comma-dangle': [
+		'error',
+		'always-multiline',
+	],
+	'style/comma-spacing': [
+		'error',
+		{
+			after: true,
+			before: false,
+		},
+	],
+	'style/comma-style': [
+		'error',
+		'last',
+	],
+	'style/computed-property-spacing': [
+		'error',
+		'never',
+		{
+			enforceForClassMembers: true,
+		},
+	],
+	'style/dot-location': [
+		'error',
+		'property',
+	],
+	'style/eol-last': 'error',
+	'style/generator-star-spacing': [
+		'error',
+		{
+			after: true,
+			before: false,
+		},
+	],
+	'style/indent': [
+		'error',
+		'tab',
+		{
+			ArrayExpression: 1,
+			CallExpression: {
+				arguments: 1,
+			},
+			flatTernaryExpressions: false,
+			FunctionDeclaration: {
+				body: 1,
+				parameters: 1,
+				returnType: 1,
+			},
+			FunctionExpression: {
+				body: 1,
+				parameters: 1,
+				returnType: 1,
+			},
+			ignoreComments: false,
+			ignoredNodes: [
+				'TSUnionType',
+				'TSIntersectionType',
+			],
+			ImportDeclaration: 1,
+			MemberExpression: 1,
+			ObjectExpression: 1,
+			offsetTernaryExpressions: true,
+			outerIIFEBody: 1,
+			SwitchCase: 1,
+			tabLength: 4,
+			VariableDeclarator: 1,
+		},
+	],
+	'style/indent-binary-ops': [
+		'error',
+		'tab',
+	],
+	'style/key-spacing': [
+		'error',
+		{
+			afterColon: true,
+			beforeColon: false,
+		},
+	],
+	'style/keyword-spacing': [
+		'error',
+		{
+			after: true,
+			before: true,
+		},
+	],
+	'style/lines-between-class-members': [
+		'error',
+		'always',
+		{
+			exceptAfterSingleLine: true,
+		},
+	],
+	'style/max-statements-per-line': [
+		'error',
+		{
+			max: 1,
+		},
+	],
+	'style/member-delimiter-style': [
+		'error',
+		{
+			multiline: {
+				delimiter: 'none',
+				requireLast: false,
+			},
+			multilineDetection: 'brackets',
+			overrides: {
+				interface: {
+					multiline: {
+						delimiter: 'none',
+						requireLast: false,
+					},
+				},
+			},
+			singleline: {
+				delimiter: 'comma',
+			},
+		},
+	],
+	'style/multiline-ternary': [
+		'error',
+		'always-multiline',
+	],
+	'style/new-parens': 'error',
+	'style/no-extra-parens': [
+		'warn',
+		'all',
+		{
+			conditionalAssign: true,
+			returnAssign: false,
+			nestedBinaryExpressions: false,
+			ignoreJSX: 'all',
+			enforceForSequenceExpressions: false,
+			ignoredNodes: [
+				'SpreadElement[argument.type=ConditionalExpression]',
+				'SpreadElement[argument.type=LogicalExpression]',
+				'SpreadElement[argument.type=AwaitExpression]',
+			],
+		},
+	],
+	'style/no-floating-decimal': 'error',
+	'style/no-mixed-operators': [
+		'error',
+		{
+			allowSamePrecedence: true,
+			groups: [
+				[
+					'==',
+					'!=',
+					'===',
+					'!==',
+					'>',
+					'>=',
+					'<',
+					'<=',
+				],
+				[
+					'&&',
+					'||',
+				],
+				[
+					'in',
+					'instanceof',
+				],
+			],
+		},
+	],
+	'style/no-mixed-spaces-and-tabs': 'error',
+	'style/no-multi-spaces': 'error',
+	'style/no-multiple-empty-lines': [
+		'error',
+		{
+			max: 1,
+			maxBOF: 0,
+			maxEOF: 0,
+		},
+	],
+	'style/no-tabs': 'off',
+	'style/no-trailing-spaces': 'error',
+	'style/no-whitespace-before-property': 'error',
+	'style/object-curly-spacing': [
+		'warn',
+		'always',
+	],
+	'style/operator-linebreak': [
+		'error',
+		'before',
+	],
+	'style/padded-blocks': [
+		'error',
+		{
+			blocks: 'never',
+			classes: 'never',
+			switches: 'never',
+		},
+	],
+	'style/quote-props': [
+		'error',
+		'consistent-as-needed',
+	],
+	'style/quotes': [
+		'error',
+		'single',
+		{
+			allowTemplateLiterals: 'always',
+			avoidEscape: false,
+		},
+	],
+	'style/rest-spread-spacing': [
+		'error',
+		'never',
+	],
+	'style/semi': [
+		'error',
+		'never',
+	],
+	'style/semi-spacing': [
+		'error',
+		{
+			after: true,
+			before: false,
+		},
+	],
+	'style/space-before-blocks': [
+		'error',
+		'always',
+	],
+	'style/space-before-function-paren': [
+		'error',
+		{
+			anonymous: 'always',
+			asyncArrow: 'always',
+			named: 'never',
+		},
+	],
+	'style/space-in-parens': [
+		'error',
+		'never',
+	],
+	'style/space-infix-ops': 'error',
+	'style/space-unary-ops': [
+		'error',
+		{
+			nonwords: false,
+			words: true,
+		},
+	],
+	'style/spaced-comment': [
+		'error',
+		'always',
+		{
+			block: {
+				balanced: true,
+				exceptions: [
+					'*',
+				],
+				markers: [
+					'!',
+				],
+			},
+			line: {
+				exceptions: [
+					'/',
+					'#',
+				],
+				markers: [
+					'/',
+				],
+			},
+		},
+	],
+	'style/template-curly-spacing': 'error',
+	'style/template-tag-spacing': [
+		'error',
+		'never',
+	],
+	'style/type-annotation-spacing': [
+		'error',
+		{},
+	],
+	'style/type-generic-spacing': 'error',
+	'style/type-named-tuple-spacing': 'error',
+	'style/wrap-iife': [
+		'error',
+		'any',
+		{
+			functionPrototypeMethods: true,
+		},
+	],
+	'style/yield-star-spacing': [
+		'error',
+		{
+			after: true,
+			before: false,
+		},
+	],
+	'style/jsx-closing-bracket-location': 'error',
+	'style/jsx-closing-tag-location': 'error',
+	'style/jsx-curly-brace-presence': [
+		'error',
+		{
+			propElementValues: 'always',
+		},
+	],
+	'style/jsx-curly-newline': 'error',
+	'style/jsx-curly-spacing': [
+		'error',
+		'never',
+	],
+	'style/jsx-equals-spacing': 'error',
+	'style/jsx-first-prop-new-line': 'error',
+	'style/jsx-function-call-newline': [
+		'error',
+		'multiline',
+	],
+	'style/jsx-indent-props': [
+		'error',
+		'tab',
+	],
+	'style/jsx-max-props-per-line': [
+		'error',
+		{
+			maximum: 1,
+			when: 'multiline',
+		},
+	],
+	'style/jsx-one-expression-per-line': [
+		'error',
+		{
+			allow: 'single-child',
+		},
+	],
+	'style/jsx-quotes': 'error',
+	'style/jsx-tag-spacing': [
+		'error',
+		{
+			afterOpening: 'never',
+			beforeClosing: 'never',
+			beforeSelfClosing: 'always',
+			closingSlash: 'never',
+		},
+	],
+	'style/jsx-wrap-multilines': [
+		'error',
+		{
+			arrow: 'parens-new-line',
+			assignment: 'parens-new-line',
+			condition: 'parens-new-line',
+			declaration: 'parens-new-line',
+			logical: 'parens-new-line',
+			prop: 'parens-new-line',
+			propertyValue: 'parens-new-line',
+			return: 'parens-new-line',
+		},
+	],
+	'style/padding-line-between-statements': [
+		'error',
+		{
+			blankLine: 'always',
+			prev: '*',
+			next: [
+				'return',
+				'break',
+				'continue',
+			],
+		},
+		{
+			blankLine: 'always',
+			prev: 'import',
+			next: '*',
+		},
+		{
+			blankLine: 'any',
+			prev: 'import',
+			next: 'import',
+		},
+		{
+			blankLine: 'always',
+			prev: '*',
+			next: [
+				'block-like',
+				'for',
+				'if',
+				'multiline-expression',
+			],
+		},
+		{
+			blankLine: 'never',
+			prev: 'case',
+			next: [
+				'block-like',
+				'for',
+				'if',
+				'multiline-expression',
+			],
+		},
+		{
+			blankLine: 'always',
+			prev: [
+				'block-like',
+				'for',
+				'if',
+				'multiline-expression',
+			],
+			next: '*',
+		},
+		{
+			blankLine: 'always',
+			prev: '*',
+			next: [
+				'export',
+				'cjs-export',
+			],
+		},
+		{
+			blankLine: 'any',
+			prev: [
+				'export',
+				'cjs-export',
+			],
+			next: [
+				'export',
+				'cjs-export',
+			],
+		},
+		{
+			blankLine: 'always',
+			prev: '*',
+			next: [
+				'enum',
+				'type',
+				'interface',
+			],
+		},
+		{
+			blankLine: 'always',
+			prev: [
+				'enum',
+				'type',
+				'interface',
+			],
+			next: '*',
+		},
+		{
+			blankLine: 'any',
+			prev: 'type',
+			next: 'type',
+		},
+	],
+} satisfies SourceRules
