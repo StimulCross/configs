@@ -18,9 +18,8 @@ for (const [id, owner] of Object.entries(owners)) {
 		? builtinRules.get(id)
 		: plugins[id.slice(0, slash)]?.rules?.[id.slice(slash + 1)]
 
-	if (!rule) {
-		throw new Error(`Rule missing from installed catalog: ${id}`)
-	}
+	if (!rule)
+		throw new Error(`Rule missing from installed catalog: ${id}`);
 
 	(grouped[owner] ??= { namespace: '', name: owner, rules: {} }).rules[id] = rule
 }

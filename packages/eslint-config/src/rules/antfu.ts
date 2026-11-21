@@ -7,8 +7,8 @@ export const rules = {
 	'antfu/no-import-node-modules-by-path': 'error',
 	'antfu/consistent-chaining': 'error',
 	'antfu/consistent-list-newline': 'error',
-	'antfu/curly': 'error',
+	'antfu/curly': 'off',
 	'antfu/if-newline': 'error',
 	'antfu/reasonable-newline': 'error',
-	'antfu/top-level-function': 'error',
+	'antfu/top-level-function': 'off',
 } satisfies SourceRules

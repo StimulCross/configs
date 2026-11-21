@@ -11,6 +11,7 @@ export const rules = {
 	'array-callback-return': 'error',
 	'block-scoped-var': 'error',
 	'constructor-super': 'error',
+	'curly': ['error', 'multi-or-nest', 'consistent'],
 	'default-case-last': 'error',
 	'dot-notation': [
 		'error',

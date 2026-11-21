@@ -142,170 +142,80 @@ export const rules = {
 	'ts/no-redundant-type-constituents': 'off',
 	'ts/naming-convention': [
 		'warn',
+		// General naming
 		{
 			selector: 'default',
-			format: [
-				'camelCase',
-			],
+			format: ['camelCase'],
+			leadingUnderscore: 'forbid',
+			trailingUnderscore: 'forbid',
+		},
+		{
+			selector: 'import',
+			format: ['camelCase', 'PascalCase'],
+		},
+
+		// Variables
+		{
+			selector: 'variable',
+			format: ['camelCase'],
 			leadingUnderscore: 'allow',
-			trailingUnderscore: 'allow',
 		},
 		{
 			selector: 'variable',
-			format: [
-				'camelCase',
-				'UPPER_CASE',
-			],
+			modifiers: ['const'],
+			format: ['camelCase', 'UPPER_CASE'],
 			leadingUnderscore: 'allow',
-			trailingUnderscore: 'allow',
 		},
 		{
 			selector: 'variable',
-			types: [
-				'boolean',
-			],
-			format: [
-				'camelCase',
-				'PascalCase',
-			],
-			prefix: [
-				'is',
-				'are',
-				'was',
-				'were',
-				'has',
-				'have',
-				'had',
-				'should',
-				'would',
-				'could',
-				'will',
-				'did',
-				'does',
-				'do',
-				'can',
-				'could',
-				'may',
-				'might',
-				'exists',
-				'contains',
-				'includes',
-				'supports',
-				'needs',
-				'requires',
-				'show',
-				'hide',
-				'visible',
-				'hidden',
-				'collapsed',
-				'expanded',
-				'ready',
-				'done',
-				'pending',
-				'loading',
-				'active',
-				'enabled',
-				'disabled',
-				'checked',
-				'selected',
-			],
+			types: ['function'],
+			format: ['camelCase', 'PascalCase'],
+			leadingUnderscore: 'allow',
 		},
-		{
-			selector: 'variable',
-			types: [
-				'function',
-			],
-			format: [
-				'camelCase',
-				'PascalCase',
-			],
-		},
+
+		// Functions and parameters
 		{
 			selector: 'parameter',
-			format: [
-				'camelCase',
-			],
+			format: ['camelCase'],
 			leadingUnderscore: 'allow',
 		},
 		{
 			selector: 'function',
-			format: [
-				'camelCase',
-				'PascalCase',
-			],
+			format: ['camelCase', 'PascalCase'],
 		},
+
+		// Types
 		{
-			selector: 'memberLike',
-			format: [
-				'camelCase',
-			],
-			leadingUnderscore: 'allow',
-		},
-		{
-			selector: 'memberLike',
-			modifiers: [
-				'private',
-				'protected',
-			],
-			format: [
-				'camelCase',
-			],
-			leadingUnderscore: 'require',
-		},
-		{
-			selector: 'classProperty',
-			modifiers: [
-				'static',
-			],
-			format: [
-				'camelCase',
-			],
-			leadingUnderscore: 'allow',
-		},
-		{
-			selector: 'classProperty',
-			modifiers: [
-				'private',
-				'protected',
-				'static',
-			],
-			format: [
-				'camelCase',
-			],
-			leadingUnderscore: 'require',
-		},
-		{
-			selector: 'enum',
-			format: [
-				'UPPER_CASE',
-				'PascalCase',
-			],
+			selector: 'typeLike',
+			format: ['PascalCase'],
 		},
 		{
 			selector: 'enumMember',
-			format: [
-				'UPPER_CASE',
-				'PascalCase',
-			],
+			format: ['PascalCase', 'UPPER_CASE'],
 		},
-		{
-			selector: 'typeLike',
-			format: [
-				'PascalCase',
-			],
-		},
-		{
-			selector: 'typeParameter',
-			format: [
-				'PascalCase',
-			],
-		},
+
+		// Contract properties
 		{
 			selector: 'objectLiteralProperty',
 			format: null,
-			modifiers: [
-				'requiresQuotes',
-			],
+		},
+		{
+			selector: 'typeProperty',
+			format: null,
+		},
+
+		// Non-public members
+		{
+			selector: 'memberLike',
+			modifiers: ['private'],
+			format: ['camelCase'],
+			leadingUnderscore: 'require',
+		},
+		{
+			selector: 'memberLike',
+			modifiers: ['protected'],
+			format: ['camelCase'],
+			leadingUnderscore: 'require',
 		},
 	],
 	'ts/no-base-to-string': 'warn',
