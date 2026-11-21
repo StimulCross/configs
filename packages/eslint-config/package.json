@@ -1,7 +1,7 @@
 {
 	"name": "@stimulcross/eslint-config",
 	"type": "module",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Personal ESLint configuration.",
 	"author": "Stimul Cross <stimulcross@gmail.com>",
 	"license": "MIT",
