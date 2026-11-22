@@ -9,6 +9,6 @@ export const rules = {
 	'antfu/consistent-list-newline': 'error',
 	'antfu/curly': 'off',
 	'antfu/if-newline': 'error',
-	'antfu/reasonable-newline': 'error',
+	'antfu/reasonable-newline': 'off',
 	'antfu/top-level-function': 'off',
 } satisfies SourceRules
