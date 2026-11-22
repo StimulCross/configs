@@ -1,5 +1,5 @@
 // Generated from installed rule schemas. Do not edit.
-// schemas-sha256: 5a7e2e5d559bc4ab58d9080e45293701794be41cac8d5eff27a2c2486f518476
+// schemas-sha256: e49c7a84c032e13f9d130d73eab4ea810a80c3d3cb9c1d14f3590cf8e933e89e
 declare namespace R0 {
 /**
  * @minItems 0
@@ -1165,6 +1165,7 @@ declare namespace R69 {
 type Options = []|[(number | {
   maximum?: number
   max?: number
+  checkConstructorCallCallbacks?: boolean
 })]
 
 }
@@ -1411,9 +1412,11 @@ type Options = []
 declare namespace R95 {
 /**
  * @minItems 0
- * @maxItems 0
+ * @maxItems 1
  */
-type Options = []
+type Options = []|[{
+  checkRelationalComparisons?: boolean
+}]
 
 }
 declare namespace R96 {
@@ -2508,9 +2511,11 @@ type Options = []
 declare namespace R209 {
 /**
  * @minItems 0
- * @maxItems 0
+ * @maxItems 1
  */
-type Options = []
+type Options = []|[{
+  checkConditionalExpressions?: boolean
+}]
 
 }
 declare namespace R210 {
@@ -3088,6 +3093,13 @@ type Options = []|[{
    * Requires the catch blocks to always have the caught error parameter so it is not discarded.
    */
   requireCatchParameter?: boolean
+  /**
+   * Additional error class names to check for cause preservation.
+   */
+  errorClassNames?: (string | {
+    name: string
+    argumentPosition: number
+  })[]
 }]
 
 }
